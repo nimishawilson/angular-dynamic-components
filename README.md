@@ -1,27 +1,13 @@
-# AngularDynamicComponents
+## Angular Dynamic Components
+Dynamic components in Angular are components that are created and inserted into the DOM at runtime, rather than being statically declared in the template. This allows for more flexible and reusable code, enabling scenarios like dynamically loading different components based on user interactions, data fetched from a server, or configuration.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
+### AngularDynamicComponents using ngComponentOutlet
 
-## Development server
+ngComponentOutlet is a directive in Angular that allows you to dynamically load a component at runtime. It is part of Angular's CommonModule and provides a powerful way to insert a component into the DOM, especially useful in scenarios where the component to be loaded is determined dynamically, such as in dynamic dashboards, tabbed interfaces, or when working with dynamic content fetched from a server.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+```
+<ng-container
+        *ngComponentOutlet="currentAd.component; inputs: currentAd.inputs"
+      />
+```
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
