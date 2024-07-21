@@ -11,3 +11,5 @@ ngComponentOutlet is a directive in Angular that allows you to dynamically load 
       />
 ```
 
+### Reference
+1) What is the use case for dynamic component loading - https://stackoverflow.com/questions/71095804/what-is-the-use-case-for-dynamic-component-loading
